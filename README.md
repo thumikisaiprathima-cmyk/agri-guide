@@ -2,7 +2,7 @@
 
 A beginner-friendly, full-stack agricultural platform for Indian farmers.
 
-**Current status: Phases 0–12 complete (demo release `1.0.0-demo`). Production-track workstreams are in progress: secure cookies, PostgreSQL-ready config and GitHub CI are prepared; 13 officially verified central/AP/Telangana scheme links are live; the community now has an Instagram-style photo diary with local video uploads.**
+**Current status: Phases 0–12 complete (demo release `1.0.0-demo`). Production-track workstreams are in progress: secure cookies, PostgreSQL-ready config and GitHub CI are prepared; 13 officially verified central/AP/Telangana scheme links are live; the community now has an Instagram-style photo diary with local video uploads; the NASA field advisor adds satellite-based soil moisture checks for saved field locations.**
 
 Phases completed so far:
 - **Phase 0:** folder structure, FastAPI backend, static frontend, configuration examples and `/api/health`.
@@ -29,10 +29,11 @@ All feature pages are now implemented. The schemes page includes 13 verified off
 4. **Community social UI (done)** — Instagram-style profile with a three-column photo grid, lightbox and one photo/video per post. Files stay in `backend/uploads/` and are served from `/uploads`; see `docs/COMMUNITY_MEDIA.md`.
 5. **Real-time farm data (partly done)** — five verified public YouTube videos are embedded in Smart Farming without an API key; a legitimate mandi price feed still needs an approved key and data source. See `docs/SMART_FARMING_VIDEOS.md`.
 6. **Real equipment rental (done)** — owners add their own listings, farmers enquire directly, owners manage replies and administrators moderate listings. No demo listings, prices, contacts or renters are seeded. See `docs/EQUIPMENT_RENTAL.md`.
+7. **NASA field advisor (done)** — farmers save field coordinates and read NASA POWER satellite-based surface/root-zone wetness, rainfall, temperature, humidity, wind and solar values, with clearly labelled app-level checks. It is not a soil test, field boundary map or crop recommendation, and it never invents values when NASA is unavailable. See `docs/NASA_FIELD_ADVISORY.md`.
 
-Translation review is **pending**: `docs/TRANSLATION_REVIEW.md` is a generated 537-key sheet awaiting native-speaker approval.
+Translation review is **pending**: `docs/TRANSLATION_REVIEW.md` is a generated sheet awaiting native-speaker approval.
 
-See `docs/RELEASE.md`, `docs/HOSTING.md`, `docs/SCHEME_SOURCES.md`, `docs/AI_ASSISTANT.md`, `docs/COMMUNITY_MEDIA.md`, `docs/SMART_FARMING_VIDEOS.md` and `docs/EQUIPMENT_RENTAL.md` for details, limits and source policy.
+See `docs/RELEASE.md`, `docs/HOSTING.md`, `docs/SCHEME_SOURCES.md`, `docs/AI_ASSISTANT.md`, `docs/COMMUNITY_MEDIA.md`, `docs/SMART_FARMING_VIDEOS.md`, `docs/EQUIPMENT_RENTAL.md` and `docs/NASA_FIELD_ADVISORY.md` for details, limits and source policy.
 
 ## Decisions made so far
 
@@ -135,7 +136,7 @@ From `agri-guide/backend`:
 .\.venv\Scripts\python.exe -m pytest -q
 ```
 
-All 68 tests should pass. They cover the API, database, community flow, local photo/video uploads, equipment, marketplace, smart farming topics and verified YouTube links, videos, schemes, verified official links, the keyless + AI assistant, cookie/CSRF auth, admin access control and release hardening.
+All 73 tests should pass. They cover the API, database, community flow, local photo/video uploads, equipment, marketplace, smart farming topics and verified YouTube links, videos, schemes, verified official links, the keyless + AI assistant, NASA POWER field advisories, cookie/CSRF auth, admin access control and release hardening.
 
 Re-check the stored official links before a release:
 

@@ -13,6 +13,7 @@ import { videoTranslations } from "./videoStrings.js";
 import { schemeTranslations } from "./schemeStrings.js";
 import { assistantTranslations } from "./assistantStrings.js";
 import { adminTranslations } from "./adminStrings.js";
+import { nasaTranslations } from "./nasaStrings.js";
 
 export const dictionaries = { en, te, hi, ta, mr };
 
@@ -33,6 +34,7 @@ for (const language of supportedLanguages) {
     ...(schemeTranslations[language] ?? {}),
     ...(assistantTranslations[language] ?? {}),
     ...(adminTranslations[language] ?? {}),
+    ...(nasaTranslations[language] ?? {}),
   };
 }
 

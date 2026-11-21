@@ -33,6 +33,15 @@ export const mockData = {
       phase: 2,
     },
     {
+      id: "nasaAdvisory",
+      icon: "mapPin",
+      tone: "sky",
+      titleKey: "cardNasaTitle",
+      descKey: "cardNasaDesc",
+      route: "#/nasa-advisory",
+      phase: 13,
+    },
+    {
       id: "schemes",
       icon: "landmark",
       tone: "amber",

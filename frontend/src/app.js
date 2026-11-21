@@ -16,6 +16,7 @@ import { renderEquipment, initEquipment } from "./pages/equipment.js";
 import { renderCommunity, initCommunity } from "./pages/community.js";
 import { renderDashboard, initDashboard } from "./pages/dashboard.js";
 import { renderWeather, initWeather } from "./pages/weather.js";
+import { renderNasaAdvisory, initNasaAdvisory } from "./pages/nasaAdvisory.js";
 import { renderPlaceholder } from "./pages/placeholder.js";
 import { translate } from "./i18n/index.js";
 import { speak, stopSpeaking } from "./services/speech.js";
@@ -33,6 +34,7 @@ const pageMounts = {
   "#/community": initCommunity,
   "#/dashboard": initDashboard,
   "#/weather": initWeather,
+  "#/nasa-advisory": initNasaAdvisory,
 };
 
 function pageForRoute(route, language) {
@@ -47,6 +49,7 @@ function pageForRoute(route, language) {
   if (route === "#/community") return renderCommunity(language);
   if (route === "#/dashboard") return renderDashboard(language);
   if (route === "#/weather") return renderWeather(language);
+  if (route === "#/nasa-advisory") return renderNasaAdvisory(language);
   return renderPlaceholder(route, language);
 }
 
